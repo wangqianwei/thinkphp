@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.wangqianwei.thinkphp.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.wangqianwei.thinkphp.MyBundle
 
 class MyApplicationService {
 

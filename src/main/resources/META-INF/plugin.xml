@@ -1,18 +1,54 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.wangqianwei.thinkphp</id>
+    <id>com.cm.php</id>
     <name>thinkphp</name>
     <vendor>wangqianwei</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.jetbrains.php</depends>
+
+    <description><![CDATA[
+        <p>Thinkphp framework integration for PhpStorm.</p>
+        <br/>
+        <b>Provides:</b>
+        <ul>
+        <li>References to class file from D(),M() function</li>
+        <li>D(),M() function autocomplete and quick-create.</li>
+        </ul>
+    ]]></description>
+
+    <change-notes><![CDATA[
+
+        <p>
+            <span>0.0.2</span>
+            <ul>
+                <li>change name <strong>php-complete</strong> to <strong>ThinkStorm</strong></li>
+                <li>support for phpstorm 9</li>
+                <li>compiled by jdk6.0</li>
+            </ul>
+        </p>
+          <p>
+            <span>0.0.3</span>
+            <ul>
+                <li>To support D('xxx','Logic') you need define function
+                 like this:</li>
+                  <li>function DL($logic){ return D($logic,'Logic');}</li>
+
+                  <li>function DS($service){ return D($service,'Service');}</li>
+
+                  <li>then get object of class xxxxLogic and enjoy all the
+                  convenience as use D function</li>
+                <ul>
+        </p>
+    ]]>
+    </change-notes>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.wangqianwei.thinkphp.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.wangqianwei.thinkphp.services.MyProjectService"/>
+<!--        <completion.contributor language="PHP" implementationClass="com.cm.php.SelfStaticFactoryTypeProvider"/>-->
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.wangqianwei.thinkphp.listeners.MyProjectManagerListener"
+        <listener class="com.cm.php.listeners.CMPhpProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>

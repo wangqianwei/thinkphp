@@ -39,3 +39,8 @@ To keep everything working, do not remove `<!-- ... -->` sections.
 Plugin based on the [IntelliJ Platform Plugin Template][template].
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
+
+
+选择响应的版本
+一定要和本地idea工具相关
+[https://plugins.jetbrains.com/plugin/6610-php/versions](https://plugins.jetbrains.com/plugin/6610-php/versions)

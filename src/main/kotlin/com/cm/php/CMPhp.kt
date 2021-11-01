@@ -1,11 +1,11 @@
-package com.github.wangqianwei.thinkphp
+package com.cm.php
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls
 import org.jetbrains.annotations.PropertyKey
 
 @NonNls
-private const val BUNDLE = "messages.MyBundle"
+private const val BUNDLE = "messages.CMPhp"
 
 object MyBundle : DynamicBundle(BUNDLE) {
 
